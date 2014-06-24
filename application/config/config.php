@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/myCms/';
+$config['base_url']	= 'http://localhost:'.$_SERVER['SERVER_PORT'].'/myCms/myCms/';
 
 /*
 |--------------------------------------------------------------------------
