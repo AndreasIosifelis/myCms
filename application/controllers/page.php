@@ -5,9 +5,10 @@ if (!defined('BASEPATH'))
 
 class Page extends CMS_Controller {
 
-    public function index() {
-        
-        $this->load->view("page/view");
+    public function index($pageId=1) {        
+        $this->load->model("Page_model");
+        $data["page"] = $this->Page_model->getPage($pageId);
+        $this->load->view("page/view", $data);
     }
 
 }

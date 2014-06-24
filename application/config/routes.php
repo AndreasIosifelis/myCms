@@ -39,6 +39,7 @@
 */
 
 $route['default_controller'] = "page";
+$route['page/(:num)'] = "page/index/$1";
 $route['404_override'] = '';
 
 
