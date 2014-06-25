@@ -23,12 +23,6 @@ and open the template in the editor.
     padding:0px;
 }
 
-
-
-.page-content{
-    padding:10px;
-}
-
 @media screen and (max-width: 800px) {
     
     .wrapper{
