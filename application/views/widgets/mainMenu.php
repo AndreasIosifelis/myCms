@@ -3,7 +3,7 @@
         <nav class="top-bar" data-topbar>
             <ul class="title-area">
                 <li class="name">
-                    <h1><a href="#">My Site</a></h1>
+                    <h1><?=anchor("", "My Site")?></h1>
                 </li>
                 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
                 <li class="toggle-topbar menu-icon"><a href="#"><span></span></a></li>
@@ -12,13 +12,13 @@
             <section class="top-bar-section">
                 <!-- Left Nav Section -->
                 <ul class="left">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><?=anchor("page/1", "Home")?></li>
+                    <li><?=anchor("page/2", "Contact")?></li>
                 </ul>
                 <!-- Right Nav Section -->
                 <ul class="right">
                     <li><a href="#">Cart</a></li>
-                    <li><a href="#">Account</a></li>
+                    <li><?=anchor("user/profile", "Account")?></li>
                 </ul>
             </section>
         </nav>
