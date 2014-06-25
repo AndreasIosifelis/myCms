@@ -1,23 +1,29 @@
-<nav class="cssmenu" id="products-menu">
-    <ul>
-        <li class='active'><a href='index.html'><span>Home</span></a></li>
-        <!--<li class='has-sub'><a href='#'><span>Products</span></a>
-            <ul>
-                <li class='has-sub'><a href='#'><span>Product 1</span></a>
-                    <ul>
-                        <li><a href='#'><span>Sub Item</span></a></li>
-                        <li class='last'><a href='#'><span>Sub Item</span></a></li>
-                    </ul>
-                </li>
-                <li class='has-sub'><a href='#'><span>Product 2</span></a>
-                    <ul>
-                        <li><a href='#'><span>Sub Item</span></a></li>
-                        <li class='last'><a href='#'><span>Sub Item</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
-        <li><a href='#'><span>About</span></a></li>
-        <li class='last'><a href='#'><span>Contact</span></a></li>-->
-    </ul>
-</nav>   
+<div class="row">
+    <div class="large-12 columns">
+        <nav class="top-bar" data-topbar data-options="back_text: Πίσω">
+            <section class="top-bar-section">
+                <ul class="left">
+                    <li><a href="#">Right Button Active</a></li>
+                    <li class="has-dropdown">
+                        <a href="#">Right Button Dropdown</a>
+                        <ul class="dropdown">
+                            <li class="has-dropdown"><a href="#">First link in dropdown</a>
+                                <ul class="dropdown">
+                                    <li><a href="#">Sub link</a></li>
+                                    <li class="has-dropdown"><a href="#">Sub link</a>
+                                        <ul class="dropdown">
+                                            <li><a href="#">Sub link</a></li>
+                                            <li><a href="#">Sub link</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Sub link</a></li>
+                                    <li><a href="#">Sub link</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+</div>

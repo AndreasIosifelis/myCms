@@ -12,6 +12,14 @@ class CMS_Controller extends CI_Controller {
         $this->mainMenu = $this->Menu_model->mainMenu();
     }
     
+    public function authUser(){
+        if(!$this->session->userdata("logged_in")){
+            redirect("user/login");
+            die();
+        }            
+    }
+    
+    
     
 
     
