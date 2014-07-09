@@ -21,5 +21,29 @@ class User extends CMS_Controller {
         $this->load->view("user/login", $data);
         
     }
+    
+    public function doLogin(){
+        /*echo json_encode(
+                    array(
+                        "error"=>false,
+                        "info"=>array("Info1", "Info2", "Info3")
+                        )
+                );
+        
+                echo json_encode(
+                    array(
+                        "error"=>false,                        
+                        "success"=>array("Success1", "Success2", "Success3")
+                        )
+                );*/
+        
+                echo json_encode(
+                    array(
+                        "error"=>true,                        
+                        "alert"=>array("Error1", "Error2", "Error3")                        
+                        )
+                );
+        
+    }
 
 }

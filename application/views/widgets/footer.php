@@ -1,6 +1,11 @@
             </div>
-        </div>        
+        </div>
+        
+        <?php $this->load->view("widgets/generalWaitModal"); ?>
         <script>
+            $(function(){
+                cms.formSubmit();
+            });
             $(document).foundation({
                 orbit: {
                     animation: "fade",

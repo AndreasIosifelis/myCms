@@ -4,22 +4,7 @@
     <dd class="accordion-navigation">
         <a href="#panel1">Login</a>
         <div id="panel1" class="content active">
-            <form>
-                <div class="row">
-                    <div class="large-4 large-centered columns">
-                        <label>Username
-                            <input type="text" placeholder="large-12.columns" />
-                        </label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-4 large-centered columns">
-                        <label>Password
-                            <input type="password" placeholder="large-12.columns" />
-                        </label>
-                    </div>
-                </div>
-            </form>
+              <?php $this->load->view("user/loginForm"); ?>
         </div>
     </dd>
     <dd class="accordion-navigation">

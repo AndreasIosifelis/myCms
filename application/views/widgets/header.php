@@ -9,6 +9,7 @@
         <script src="<?= base_url("public/js/vendor/modernizr.js") ?>"></script>
         <script src="<?= base_url("public/js/vendor/jquery.js") ?>"></script>
         <script src="<?= base_url("public/js/foundation.min.js") ?>"></script>
+        <script src="<?= base_url("public/js/cms/cms.js") ?>"></script>
     </head>
     <body>
         <?php
