@@ -23,6 +23,7 @@ class User extends CMS_Controller {
     }
     
     public function doLogin(){
+        //sleep(5);
         /*echo json_encode(
                     array(
                         "error"=>false,

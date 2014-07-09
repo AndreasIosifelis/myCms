@@ -43,7 +43,8 @@ cms.formSubmit = function(){
             };       
         
         $("#generalWaitModal").data("options", {
-            animation: "none",
+            animation: "fade",
+            animation_speed: 100,
             close_on_background_click: false
         });
         $("#generalWaitModal").foundation("reveal", "open");
