@@ -5,6 +5,7 @@
         <script>
             $(function(){
                 cms.formSubmit();
+                console.log($("#sessionId").val());
             });
             $(document).foundation({
                 orbit: {

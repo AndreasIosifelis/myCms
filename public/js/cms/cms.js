@@ -26,24 +26,40 @@ cms.formSubmit = function(){
         var url = $(this).attr("action"),
             method = $(this).attr("method"),
             data = cms.serializeForm($(this)),
-            errorFn = function(data){
-                console.log(data.error);
-                console.log(data);
+            formMessagePanel = $("#formMessagePanel"),
+            displayMessages = function(messages, cls){
+                formMessagePanel
+                        .removeClass("alert")
+                        .removeClass("info")
+                        .removeClass("success")
+                        .show()
+                        .addClass(cls)
+                        .html(messages.join("<br />"));
             },
-            successFn = function(data){                
+            errorFunction = function(data){                
+                displayMessages(data.alert, "alert");
+            },
+            successFunction = function(data){                
                 console.log(data.error);
                 console.log(data);
+                if(data.info)
+                    displayMessages(data.info, "info");
+                else if(data.success)
+                    displayMessages(data.success, "success");
             },
             callBackFunction = function(data){                
                 $("#generalWaitModal").foundation("reveal", "close");
                 if(data.error)
-                    errorFn(data);
+                    errorFunction(data);
                 else
-                    successFn(data);                
-            };       
+                    successFunction(data);                
+            };
+        formMessagePanel
+                .html("")
+                .hide();
         
         $("#generalWaitModal").data("options", {
-            animation: "fade",
+            animation: "none",
             animation_speed: 100,
             close_on_background_click: false
         });
@@ -52,7 +68,7 @@ cms.formSubmit = function(){
         $.ajax({
             url: url,
             method: method,
-            data: data,
+            data: { json : data },
             dataType: "json",
             success: callBackFunction,
             error:function(){

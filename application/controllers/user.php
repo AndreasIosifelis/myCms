@@ -18,32 +18,27 @@ class User extends CMS_Controller {
     
     public function login(){        
         $data["page"]["title"] = "Login / Register";        
-        $this->load->view("user/login", $data);
-        
+        $this->load->view("user/login", $data);        
     }
     
     public function doLogin(){
-        //sleep(5);
-        /*echo json_encode(
-                    array(
-                        "error"=>false,
-                        "info"=>array("Info1", "Info2", "Info3")
-                        )
-                );
+        $this->authClient();
+        $input = $this->request();
+        $validClient = $input->sessionId == $this->session->userdata("session_id");
+        if(!$validClient){
+            $response = array(
+                "error"=>true,
+                "alert"=> array("Invalid Client")
+            );
+        } else {
         
-                echo json_encode(
-                    array(
-                        "error"=>false,                        
-                        "success"=>array("Success1", "Success2", "Success3")
-                        )
-                );*/
+            $response = array(
+                "error"=>false,
+                "success"=> array($input->username, $input->password, $input->sessionId, $validClient)
+            );
+        }
         
-                echo json_encode(
-                    array(
-                        "error"=>true,                        
-                        "alert"=>array("Error1", "Error2", "Error3")                        
-                        )
-                );
+        $this->respond($response);
         
     }
 
